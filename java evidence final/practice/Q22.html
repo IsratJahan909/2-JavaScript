@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="result">result</p>
+   
+   
+
+   <script>
+    var c = 0
+    for (i = 0; i<3; i++){
+        var n = prompt("Please enter a number of 16 or fewer digits");
+        if (c < n){
+            c = n;
+        }
+    }
+    document.getElementById('ressult').innerHTML = "The largest number is" + c;
+   </script>
+</body>
+</html>

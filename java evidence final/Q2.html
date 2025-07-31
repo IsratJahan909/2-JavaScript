@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Question 2</title>
+</head>
+
+
+
+<body>
+	<h1>Find the largest number from three numbers</h1>
+	<h5 id="demo"></h5>
+	<script>
+		let min = Number.MAX_SAFE_INTEGER;//1
+		for (i = 0; i < 3; i++) {
+			var n = parseInt(prompt("Please insert number: "+ i));//1, 8, 32
+			if(min > n){
+				min = n;
+			}
+		}
+		document.getElementById('demo').innerHTML = "The MAX number is " + min;
+
+
+
+
+
+
+		// let max = Number.MIN_SAFE_INTEGER;//1
+		// for (i = 0; i < 3; i++) {
+		// 	var n = parseInt(prompt("Please insert number: "+ (i+1)));//1, 8, 32
+		// 	if(max < n){
+		// 		max = n;
+		// 	}
+		// }
+		// document.getElementById('demo').innerHTML = "The MAX number is " + max;
+	</script>
+</body>
+
+</html>

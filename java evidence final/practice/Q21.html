@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Result</h3>
+    <p id="result"></p>
+    
+
+
+
+
+    <script>
+    //     var n = prompt("Please input 16 or less digits");
+    //     n = Number (n);
+        
+    //    if (n.length <=16 && !isNaN(n)){
+    //     console.log (n % 2);
+
+
+       
+    //     if  (n % 2 === 0) {
+    //         document.getElementById('result').innerHTML = n + 'is an even number';
+    //     } 
+    //     else if (n % 2 === 1) {
+    //         document.getElementById('result').innerHTML = n + 'is a odd number';
+    //     }
+    //     else {
+    //         document.getElementById('result').innerHTML = n + 'is a NaN';
+    //     }}  
+
+
+    // var n = prompt("Please input a number with 16 or fewer digits:");
+
+    // // চেক করবো n-এর দৈর্ঘ্য (string আকারে)
+    // if (n.length <= 16 && !isNaN(n)) {
+    //     n = Number(n);
+
+    //     console.log(n % 2);
+
+    //     if (n % 2 === 0) {
+    //         document.getElementById('result').innerHTML = n + ' is an even number';
+    //     } else {
+    //         document.getElementById('result').innerHTML = n + ' is an odd number';
+    //     }
+    // } else {
+    //     document.getElementById('result').innerHTML = 'Invalid input or more than 16 digits.';
+    // }   
+
+
+
+    var n = prompt("Please Insert 16 or fewer digits:");
+   
+
+    if (n.length <=16 && !isNaN(n)){
+        n = Number(n); 
+
+         console.log(n%2);
+         if (n % 2 === 0){
+            document.getElementById('result').innerHTML = n + 'is an even number';
+
+         } else if (n % 2 === 1 || n % 2 === -1) {
+            document.getElementById('result').innerHTML = n + 'is an odd number';
+         } else{
+            document.getElementById('result').innerHTML = n + 'is a NaN';
+         } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

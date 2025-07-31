@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranee's Information Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class=" bg-light p-4">
+
+    <div class="container p-3 rounded bg-white shadow">
+
+        <h2 class="mb-4">Trainee's Data </h2>
+        <form class="userForm" onsubmit="formSubmit(); return false;">
+            <div class="mb-3">
+                <label for="text" class="form-label"> Name: </label>
+                <input type="text" id="name" class="form-control" placeholder="Input Your Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Contact No: </label>
+                <input type="text" id="contact" class="form-control" placeholder="Input Your Contact No" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Input Your Email Address" required>
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Remarks:</label>
+                <textarea class="form-control" id="remarks" name="remarks"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gender:</label>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="gender" value="Male">
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="gender" value="Female">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Courses:</label>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" name="courses" value="DDN">
+                    <label class="form-check-label">DDN</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" name="courses" value="NND">
+                    <label class="form-check-label">NND</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" name="courses" value="MDC">
+                    <label class="form-check-label">MDC</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Location:</label>
+                <select name="location" id="location">
+                    <option value="Select Location">Select Location</option>
+                    <option value="Dhanmondi">Dhanmondi</option>
+                    <option value="Banani">Banani</option>
+                    <option value="Maniknagor">Maniknagor</option>
+                </select>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+
+        </form>
+
+    </div>
+
+
+
+    <script>
+        function formSubmit() {
+            const name = document.getElementById("name").value;
+            const contact = document.getElementById("contact").value;
+            const email = document.getElementById("email").value;
+            const remarks = document.getElementById("remarks").value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value || "";
+            const coursesElement = document.querySelectorAll('input[name="courses"]:checked');
+            const courses = Array.from(coursesElement).map(el => el.value).join(",");
+
+
+
+            const location = document.getElementById("location").value;
+
+
+            
+        const newWindow = window.open("", "_blank", "height= 700,width = 400");
+            newWindow.document.write(`
+
+            <h1>Form Submission</h1>
+            <h1>Name:${name}</h1>
+            <h1>contact:${contact}</h1>
+            <h1>Email:${email}</h1>
+            <h1>Remarks:${remarks}</h1>
+            <h1>Gender:${gender}</h1>
+            <h1>courses:${courses}</h1>
+            <h1>Location:${location}</h1>
+            <button onclick = "window.close()">Close</button>
+             
+            `);
+        
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
